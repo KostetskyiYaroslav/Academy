@@ -3,8 +3,8 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Welcome</title>
-    <link href="../../css/materialize.min.css" rel="stylesheet" type="text/css" >
-    <link href="../../css/style.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/materialize.min.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
 <nav>
@@ -22,7 +22,7 @@
                         <h1>403</h1>
                         <h2>Error ! <span>You don't have permission to see content!</span></h2>
                     </div>
-                    <p><a href="javascript:history.go(-1)">&laquo; Go Back</a> / <a href="../../page.php?page=Login">Go Login &raquo;</a></p>
+                    <p><a href="javascript:history.go(-1)">&laquo; Go Back</a> / <a href="../page.php?page=Login">Go Login &raquo;</a></p>
                 </section>
             </div>
         </form>

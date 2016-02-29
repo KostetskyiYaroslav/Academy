@@ -15,7 +15,7 @@ class BL
 
     public function __construct ()
     {
-        $this->DA =  new DA();
+        $this->DA = new DA();
     }
 
     #endregion

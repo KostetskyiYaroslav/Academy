@@ -1,23 +1,20 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Yaroslav
- * Date: 17.02.2016
- * Time: 16:05
- */
 
 namespace DAL\DB;
 
 
 class Database
 {
+
     #region Declaration
+
     private $DBLogin = 'root';
-    private $DBPassword = '1111';
+    private $DBPassword = null;
     private $contacts = [];
 
     public function  __construct ()
     {
+        $this->DBPassword = md5('1111');
         $this->contacts = array(
             array(
                 'id' => 1,
@@ -182,9 +179,12 @@ class Database
             )
         );
     }
+
     #endregion
 
+
     #region Get
+
     public function getContacts(){
         return $this->contacts;
     }
@@ -196,5 +196,7 @@ class Database
     public function getPassword(){
         return $this->DBPassword;
     }
+
     #endregion
+
 }

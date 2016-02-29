@@ -3,6 +3,7 @@
 namespace DAL;
 
 include "DA.php";
+include "Auth.php";
 
 $method = $_SERVER['REQUEST_METHOD'];
 $DAO = new DA();
@@ -10,23 +11,30 @@ $DAO = new DA();
 switch ($method) {
     case 'GET':
         if(!isset($_COOKIE['login'])){
-            $login = $_GET['login'];
-            $password = $_GET['password'];
 
-            if ( $login == $DAO->getLogin()) {
-                if ( $password == $DAO->getPassword() ) {
-                    setcookie('login', 'root', time() + 604800, "/");
-                    echo 'TRUE';
-                    return 'TRUE';
-                }
+            $auth = new Auth($_GET['login'], $_GET['password']);
+
+            if ( $auth->getLogin() == $DAO->getLogin() &&
+                $auth->getPassword() == $DAO->getPassword() ) {
+
+                setcookie('login', $auth->getLogin(), $auth->getExpire(), "/");
+
+                echo 'TRUE';
+                return 'TRUE';
+
             }
+
             echo 'FALSE';
             return 'FALSE';
+
         } else {
+
             echo 'Cookie unset!';
             setcookie('login', null, -0, "/");
+
         }
         break;
+
     default:
         E_ERROR;
         break;

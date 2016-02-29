@@ -3,8 +3,8 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Welcome</title>
-    <link href="../../css/materialize.min.css" rel="stylesheet" type="text/css" >
-    <link href="../../css/style.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/materialize.min.css" rel="stylesheet" type="text/css" >
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
 <nav>
@@ -22,7 +22,7 @@
                         <h1>404</h1>
                         <h2>Error ! <span>Page Not Found</span></h2>
                     </div>
-                    <p><a href="javascript:history.go(-1)">&laquo; Go Back</a> / <a href="../index.php">Go Home &raquo;</a></p>
+                    <p><a href="javascript:history.go(-1)">&laquo; Go Back</a> / <a href="../../page.php?page=Login">Go Home &raquo;</a></p>
                 </section>
             </div>
         </form>
