@@ -1,0 +1,24 @@
+.custom-nav {
+    padding-left: 5px;
+}
+.sidebar-left {
+    margin-top: 20px;
+    height: 100px;
+    width: 200px;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+}
+.sidebar-right {
+    margin-top: 20px;
+    margin-right: 35px;
+    height: 50px;
+    width: 150px;
+    float: right;
+    text-align: center;
+    font-weight: bold;
+}
+.sidebar-sort input{
+    margin: 5px;
+}
+
